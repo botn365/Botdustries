@@ -1,3 +1,5 @@
 .gradle/
 .idea/
 run/
+libs/
+ideas.txt
