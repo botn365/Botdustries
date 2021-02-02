@@ -1,6 +1,6 @@
-# Forge-MDK
-[![Build Status](https://travis-ci.org/basdxz/Forge-MDK.svg?branch=1.7.10)](https://travis-ci.org/basdxz/Forge-MDK)
+# Botdustries
+a minecraft addon mod for gregtech new horizons
 
-A working barebones Forge MDK implementation
+# to build
 
-Made to be copied, opened with Intellij, and just work.
+needs bartworks and gregtech as dep
