@@ -3,3 +3,7 @@
 run/
 libs/
 ideas.txt
+BotIndustries.iml
+BotIndustries.ipr
+BotIndustries.iws
+*.bat
