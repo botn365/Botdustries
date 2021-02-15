@@ -17,7 +17,8 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, dependencies =
         "required-after:gregtech; " +
-        "required-after:bartworks")
+        "required-after:bartworks; " +
+        "before:miscutils")
 public class Botdustries {
 
     @EventHandler
