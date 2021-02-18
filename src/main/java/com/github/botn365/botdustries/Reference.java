@@ -5,7 +5,7 @@ public final class Reference {
     //The location of this file must be defined in gradle.properties under project_reference
     public static final String MODID = "botdustries";
     public static final String NAME = "Botdustries";
-    public static final String VERSION = "1.0.1.0";
+    public static final String VERSION = "1.1.0.0";
 
     private Reference() {}
 }
