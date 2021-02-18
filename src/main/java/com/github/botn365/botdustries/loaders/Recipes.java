@@ -53,9 +53,17 @@ public class Recipes
         GT_Values.RA.addBlastRecipe(H2WO4,null, null, null, WO3, null,
                 200, 480, 1200);
 
+        ItemStack WO3Fe = tungstenSteelOxide.get(dust,2);
+        GT_Values.RA.addMixerRecipe(WO3,Materials.Steel.getDust(1),null,null,null,null,
+                WO3Fe,100,1920);
+
         WO3.stackSize = 2;
         GT_Values.RA.addBlastRecipe(WO3, Materials.Carbon.getDust(3),null, Materials.CarbonDioxide.getGas(6000),
-                GT_OreDictUnificator.get(ingotHot, Materials.Tungsten,2L),null,1200, 1920, 3000);
+                GT_OreDictUnificator.get(ingotHot, Materials.Tungsten,2L),null,8000, 1920, 3000);
+
+        GT_Values.RA.addBlastRecipe(WO3Fe, Materials.Carbon.getDust(3),Materials.Nitrogen.getGas(2000), Materials.CarbonDioxide.getGas(6000),
+                GT_OreDictUnificator.get(ingotHot, Materials.TungstenSteel,2L),null,5000, 1920, 3000);
+
     }
 
     public static void removeRecipes()

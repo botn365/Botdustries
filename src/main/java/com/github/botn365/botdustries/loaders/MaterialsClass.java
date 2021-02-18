@@ -53,6 +53,19 @@ public class MaterialsClass implements Runnable
             new Pair<>(Oxygen,3)
     );
 
+    public static final Werkstoff tungstenSteelOxide = new Werkstoff(
+            new short[]{0x1f,0x27,0x69},
+            "Tungstensteel Oxide",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().onlyDust(),
+            29902,
+            SET_FINE,
+            new Pair<>(Tungsten, 1),
+            new Pair<>(Oxygen,3),
+            new Pair<>(Steel,1)
+    );
+
     @Override
     public void run()
     {
