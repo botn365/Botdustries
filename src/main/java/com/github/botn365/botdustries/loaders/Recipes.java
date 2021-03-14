@@ -26,8 +26,6 @@ public class Recipes
                 Materials.CarbonDioxide.getCells(1), WerkstoffLoader.CalciumChloride.get(dust,3), 80,120);
 
         // tungsten chain
-        //        GT_Values.RA.addAutoclaveRecipe(Materials.Scheelite.getDust(7), Materials.SodaAsh.getDust(4),Materials.Water.getFluid(4000)
-//                ,sodiumTungsten, Materials.Calcium.getDust(2),10000, 100, 1920, false);
         FluidStack sodiumTungsten = new FluidStack(LoadFluids.sodiumTungstate,4000);
         ItemStack scheelite = Materials.Scheelite.getDust(7);
 
@@ -61,8 +59,9 @@ public class Recipes
         GT_Values.RA.addBlastRecipe(WO3, Materials.Carbon.getDust(3),null, Materials.CarbonDioxide.getGas(6000),
                 GT_OreDictUnificator.get(ingotHot, Materials.Tungsten,2L),null,8000, 1920, 3000);
 
-        GT_Values.RA.addBlastRecipe(WO3Fe, Materials.Carbon.getDust(3),Materials.Nitrogen.getGas(2000), Materials.CarbonDioxide.getGas(6000),
-                GT_OreDictUnificator.get(ingotHot, Materials.TungstenSteel,2L),null,5000, 1920, 3000);
+        WO3Fe.stackSize = 4;
+        GT_Values.RA.addBlastRecipe(WO3Fe, Materials.Carbon.getDust(3),Materials.Nitrogen.getGas(4000), Materials.CarbonDioxide.getGas(6000),
+                GT_OreDictUnificator.get(ingotHot, Materials.TungstenSteel,4L),null,5000, 1920, 6000);
 
     }
 
@@ -100,5 +99,6 @@ public class Recipes
             }
         }
         electroRecipeMap.removeAll(toDel);
+        GT_Recipe.GT_Recipe_Map.sElectrolyzerRecipes.reInit();
     }
 }
