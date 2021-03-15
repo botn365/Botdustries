@@ -61,7 +61,11 @@ public class Recipes
 
         WO3Fe.stackSize = 4;
         GT_Values.RA.addBlastRecipe(WO3Fe, Materials.Carbon.getDust(3),Materials.Nitrogen.getGas(4000), Materials.CarbonDioxide.getGas(6000),
-                GT_OreDictUnificator.get(ingotHot, Materials.TungstenSteel,4L),null,5000, 1920, 6000);
+                GT_OreDictUnificator.get(ingotHot, Materials.TungstenSteel,4L),null,10000, 1920, 3000);
+
+        //rocket fuels
+
+
 
     }
 
