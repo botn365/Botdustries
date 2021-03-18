@@ -27,7 +27,7 @@ public class MaterialsClass implements Runnable
 //            new Pair<>(Tungsten, 1),
 //            new Pair<>(Oxygen, 4)
 //    );
-    public static final Werkstoff tungsticAcid = new Werkstoff(
+    public static final Werkstoff TungsticAcid = new Werkstoff(
             new short[]{0xf5, 0xf1, 0x16},
             "Tungstic Acid",
             new Werkstoff.Stats(),
@@ -39,7 +39,7 @@ public class MaterialsClass implements Runnable
             new Pair<>(Tungsten,1),
             new Pair<>(Oxygen,4)
     );
-    public static final Werkstoff tungstenTrioxide = new Werkstoff(
+    public static final Werkstoff TungstenTrioxide = new Werkstoff(
             new short[]{0x0f,0x5,0x16},
             "Tungsten Trioxide",
             new Werkstoff.Stats(),
@@ -50,7 +50,7 @@ public class MaterialsClass implements Runnable
             new Pair<>(Tungsten, 1),
             new Pair<>(Oxygen,3)
     );
-    public static final Werkstoff tungstenSteelOxide = new Werkstoff(
+    public static final Werkstoff TungstenSteelOxide = new Werkstoff(
             new short[]{0x1f,0x27,0x69},
             "Tungstensteel Oxide",
             new Werkstoff.Stats(),
@@ -62,7 +62,7 @@ public class MaterialsClass implements Runnable
             new Pair<>(Oxygen,3),
             new Pair<>(Steel,1)
     );
-    public static final Werkstoff  ammoniumNitrate = new Werkstoff(
+    public static final Werkstoff AmmoniumNitrate = new Werkstoff(
             new short[]{0x81,0xcc,0x00},
             "Ammonium Nitrate",
             new Werkstoff.Stats(),
@@ -75,7 +75,7 @@ public class MaterialsClass implements Runnable
             new Pair<>(Nitrogen,1),
             new Pair<>(Oxygen,3)
     );
-    public static final Werkstoff sodiumTungstate = new Werkstoff(
+    public static final Werkstoff SodiumTungstate = new Werkstoff(
             new short[]{0xc, 0xed, 0xd7,0},
             "Sodium Tungstate",
             new Werkstoff.Stats(),
@@ -84,7 +84,7 @@ public class MaterialsClass implements Runnable
             29904,
             SET_FINE
     );
-    public static final Werkstoff phosgene = new Werkstoff(
+    public static final Werkstoff Phosgene = new Werkstoff(
             new short[]{0x15,0xa1,0x1a},
             "Phosgene",
             new Werkstoff.Stats(),
@@ -93,7 +93,7 @@ public class MaterialsClass implements Runnable
             29905,
             SET_FINE
     );
-    public static final Werkstoff ethylchloroformate = new Werkstoff(
+    public static final Werkstoff Ethylchloroformate = new Werkstoff(
             new short[]{0x0a,0xc2,0xcc},
             "Ethyl Chloroformate",
             new Werkstoff.Stats(),
@@ -102,7 +102,7 @@ public class MaterialsClass implements Runnable
             29906,
             SET_FINE
     );
-    public static final Werkstoff ethylcarbamate = new Werkstoff(
+    public static final Werkstoff Ethylcarbamate = new Werkstoff(
             new short[]{0x0d,0xa9,0xb8},
             "Ethyl Carbamate",
             new Werkstoff.Stats(),
@@ -111,7 +111,7 @@ public class MaterialsClass implements Runnable
             29907,
             SET_FINE
     );
-    public static final Werkstoff ethylNnitrocarbamate = new Werkstoff(
+    public static final Werkstoff EthylNnitrocarbamate = new Werkstoff(
             new short[]{0x0d,0x85,0xb8},
             "Ethyl N-nitrocarbamate",
             new Werkstoff.Stats(),
@@ -120,7 +120,7 @@ public class MaterialsClass implements Runnable
             29908,
             SET_FINE
     );
-    public static final Werkstoff ammoniumNnitrourethane = new Werkstoff(
+    public static final Werkstoff AmmoniumNnitrourethane = new Werkstoff(
             new short[]{0x0d,0x54,0xb8},
             "Ammonium N-nitrourethane",
             new Werkstoff.Stats(),
@@ -129,7 +129,7 @@ public class MaterialsClass implements Runnable
             29909,
             SET_FINE
     );
-    public static final Werkstoff ethylDinitrocarbamate = new Werkstoff(
+    public static final Werkstoff EthylDinitrocarbamate = new Werkstoff(
             new short[]{0x39,0x08,0xc2},
             "Ethyl Dinitrocarbamate",
             new Werkstoff.Stats(),
@@ -138,7 +138,7 @@ public class MaterialsClass implements Runnable
             29910,
             SET_FINE
     );
-    public static final Werkstoff dinitrogenPentoxide = new Werkstoff(
+    public static final Werkstoff DinitrogenPentoxide = new Werkstoff(
             new short[]{0xcf,0xeb,0x34},
             "Dinitrogen Pentoxide",
             new Werkstoff.Stats(),
@@ -147,7 +147,7 @@ public class MaterialsClass implements Runnable
             29911,
             SET_FINE
     );
-    public static final Werkstoff ammoniumDinitramide = new Werkstoff(
+    public static final Werkstoff AmmoniumDinitramide = new Werkstoff(
             new short[]{0x8a,0x0f,0xd1},
             "Ammonium Dinitramide",
             new Werkstoff.Stats(),
@@ -165,12 +165,12 @@ public class MaterialsClass implements Runnable
             29913,
             SET_FINE
     );
-    public static final Werkstoff ammoniumBicarbonate = new Werkstoff(
+    public static final Werkstoff HeatedAmmoniaChloride = new Werkstoff(
             new short[]{0x59,0x5f,0x69},
-            "Ammonium bicarbonate",
+            "Heated Ammonia Chloride",
             new Werkstoff.Stats(),
             COMPOUND,
-            new Werkstoff.GenerationFeatures().onlyDust(),
+            new Werkstoff.GenerationFeatures().disable().addCells(),
             29914,
             SET_FINE
     );
