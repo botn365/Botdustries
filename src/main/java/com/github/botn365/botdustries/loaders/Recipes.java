@@ -1,5 +1,6 @@
 package com.github.botn365.botdustries.loaders;
 
+import appeng.integration.modules.GT;
 import com.github.bartimaeusnek.bartworks.system.material.WerkstoffLoader;
 import gregtech.api.enums.GTNH_ExtraMaterials;
 import gregtech.api.enums.GT_Values;
@@ -26,7 +27,7 @@ public class Recipes
                 Materials.CarbonDioxide.getCells(1), WerkstoffLoader.CalciumChloride.get(dust,3), 80,120);
 
         // tungsten chain
-        FluidStack sodiumTungsten = new FluidStack(LoadFluids.sodiumTungstate,4000);
+        FluidStack sodiumTungsten = sodiumTungstate.getFluidOrGas(4000);
         ItemStack scheelite = Materials.Scheelite.getDust(7);
 
         GT_Values.RA.addAutoclaveRecipe(Materials.Tungstate.getDust(7), Materials.SodiumHydroxide.getDust(4),
@@ -64,8 +65,49 @@ public class Recipes
                 GT_OreDictUnificator.get(ingotHot, Materials.TungstenSteel,4L),null,10000, 1920, 3000);
 
         //rocket fuels
+        ItemStack C2 = GT_Utility.getIntegratedCircuit(2);
+        GT_Values.RA.addChemicalRecipe(Materials.CarbonMonoxide.getCells(1),C2,Materials.Chlorine.getGas(2000),
+                null,phosgene.get(cell,1),60,480);
+        GT_Values.RA.addChemicalRecipe(phosgene.get(cell,1),C2,Materials.Ethanol.getFluid(1000),
+                Materials.HydrochloricAcid.getGas(1000),ethylchloroformate.get(cell,1),200,1920);
 
+        GT_Values.RA.addChemicalRecipe(ethylchloroformate.get(cell,1),C2,Materials.Ammonia.getGas(2000),
+                WerkstoffLoader.AmmoniumChloride.getFluidOrGas(1000),ethylcarbamate.get(cell,1),200,1920);
 
+        GT_Values.RA.addChemicalRecipe(ethylcarbamate.get(cell,1),C2,Materials.NitricAcid.getFluid(1000),
+                Materials.Water.getFluid(1000),ethylNnitrocarbamate.get(cell,1),200,1920);
+
+        GT_Values.RA.addChemicalRecipe(ethylNnitrocarbamate.get(cell,1),C2,Materials.Ammonia.getGas(1000),
+                null,ammoniumNnitrourethane.get(cell,1),200,1920);
+
+        GT_Values.RA.addChemicalRecipe(ammoniumNnitrourethane.get(cell,1),dinitrogenPentoxide.get(dust,1),null,null,
+                ethylDinitrocarbamate.get(cell,1),ammoniumNitrate.get(dust,1),200,1920);
+
+        GT_Values.RA.addChemicalRecipe(ethylDinitrocarbamate.get(cell,1),C2,Materials.Ammonia.getGas(2000),
+                ethylcarbamate.getFluidOrGas(980),ammoniumDinitramide.get(cell,1),200,1920);
+
+        GT_Values.RA.addMultiblockChemicalRecipe(
+                new ItemStack[]{C2},
+                new FluidStack[]{
+                        ammoniumDinitramide.getFluidOrGas(6000),
+                        Materials.Methanol.getFluid(2000),
+                        Materials.Ammonia.getGas(500),
+                        Materials.Water.getFluid(1500)},
+                new FluidStack[]{LMP103S.getFluidOrGas(10000)},
+                null,
+                2000,1920);
+
+        GT_Values.RA.addChemicalRecipe(Materials.PhosphorousPentoxide.getDust(1),C2,Materials.NitricAcid.getFluid(12000),
+                Materials.PhosphoricAcid.getFluid(4000),dinitrogenPentoxide.get(dust,6),200,1920);
+
+        GT_Values.RA.addDistilleryRecipe(C2,Materials.PhosphoricAcid.getFluid(1000),
+                Materials.Water.getFluid(500),Materials.Phosphorus.getDust(1),20,480,false);
+
+        GT_Values.RA.addChemicalRecipe(ammoniumNitrate.get(dust,1),Materials.SodiumHydroxide.getDust(1),null,
+                Materials.Ammonia.getGas(1000),WerkstoffLoader.SodiumNitrate.get(dust,1),200,480);
+
+        GT_Values.RA.addChemicalRecipe(WerkstoffLoader.SodiumNitrate.get(dust,2),C2,Materials.SulfuricAcid.getFluid(1000),
+                Materials.NitricAcid.getFluid(2000),WerkstoffLoader.Sodiumsulfate.get(dust,1),200,120);
 
     }
 
@@ -75,27 +117,23 @@ public class Recipes
 
     }
 
-    public static void removeTungstenElectro()
-    {
+    public static void removeTungstenElectro() {
         Collection<GT_Recipe> electroRecipeMap = GT_Recipe.GT_Recipe_Map.sElectrolyzerRecipes.mRecipeList;
         HashSet<GT_Recipe> toDel = new HashSet<>();
         ItemStack[] toRemove = {
                 Materials.Scheelite.getDust(1),
                 Materials.Tungstate.getDust(1),
-                WerkstoffLoader.Ferberite.get(dust,1),
-                WerkstoffLoader.Huebnerit.get(dust,1)};
-        for (GT_Recipe tRecipe : electroRecipeMap)
-        {
+                WerkstoffLoader.Ferberite.get(dust, 1),
+                WerkstoffLoader.Huebnerit.get(dust, 1)};
+        for (GT_Recipe tRecipe : electroRecipeMap) {
             if (tRecipe.mFakeRecipe)
                 continue;
             for (int i = 0; i < tRecipe.mInputs.length; i++) {
                 ItemStack tItem = tRecipe.mInputs[i];
                 if (item == null || !GT_Utility.isStackValid(tItem))
                     continue;
-                for (ItemStack tStack: toRemove)
-                {
-                    if (GT_Utility.areStacksEqual(tItem,tStack))
-                    {
+                for (ItemStack tStack : toRemove) {
+                    if (GT_Utility.areStacksEqual(tItem, tStack)) {
                         toDel.add(tRecipe);
                         continue;
                     }
