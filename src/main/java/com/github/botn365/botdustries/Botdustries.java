@@ -1,7 +1,6 @@
 package com.github.botn365.botdustries;
 
 import com.github.bartimaeusnek.bartworks.API.WerkstoffAdderRegistry;
-import com.github.botn365.botdustries.loaders.LoadFluids;
 import com.github.botn365.botdustries.loaders.MaterialsClass;
 import com.github.botn365.botdustries.loaders.Recipes;
 import cpw.mods.fml.common.event.FMLLoadCompleteEvent;
@@ -25,7 +24,6 @@ public class Botdustries {
     public void preInit(FMLPreInitializationEvent event)
     {
         WerkstoffAdderRegistry.addWerkstoffAdder(new MaterialsClass());
-        new LoadFluids();
     }
 
     @EventHandler

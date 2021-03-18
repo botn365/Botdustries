@@ -27,7 +27,6 @@ public class MaterialsClass implements Runnable
 //            new Pair<>(Tungsten, 1),
 //            new Pair<>(Oxygen, 4)
 //    );
-
     public static final Werkstoff tungsticAcid = new Werkstoff(
             new short[]{0xf5, 0xf1, 0x16},
             "Tungstic Acid",
@@ -40,7 +39,6 @@ public class MaterialsClass implements Runnable
             new Pair<>(Tungsten,1),
             new Pair<>(Oxygen,4)
     );
-
     public static final Werkstoff tungstenTrioxide = new Werkstoff(
             new short[]{0x0f,0x5,0x16},
             "Tungsten Trioxide",
@@ -52,7 +50,6 @@ public class MaterialsClass implements Runnable
             new Pair<>(Tungsten, 1),
             new Pair<>(Oxygen,3)
     );
-
     public static final Werkstoff tungstenSteelOxide = new Werkstoff(
             new short[]{0x1f,0x27,0x69},
             "Tungstensteel Oxide",
@@ -64,6 +61,118 @@ public class MaterialsClass implements Runnable
             new Pair<>(Tungsten, 1),
             new Pair<>(Oxygen,3),
             new Pair<>(Steel,1)
+    );
+    public static final Werkstoff  ammoniumNitrate = new Werkstoff(
+            new short[]{0x81,0xcc,0x00},
+            "Ammonium Nitrate",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().onlyDust(),
+            29903,
+            SET_FINE,
+            new Pair<>(Nitrogen,1),
+            new Pair<>(Hydrogen,4),
+            new Pair<>(Nitrogen,1),
+            new Pair<>(Oxygen,3)
+    );
+    public static final Werkstoff sodiumTungstate = new Werkstoff(
+            new short[]{0xc, 0xed, 0xd7,0},
+            "Sodium Tungstate",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29904,
+            SET_FINE
+    );
+    public static final Werkstoff phosgene = new Werkstoff(
+            new short[]{0x15,0xa1,0x1a},
+            "Phosgene",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29905,
+            SET_FINE
+    );
+    public static final Werkstoff ethylchloroformate = new Werkstoff(
+            new short[]{0x0a,0xc2,0xcc},
+            "Ethyl Chloroformate",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29906,
+            SET_FINE
+    );
+    public static final Werkstoff ethylcarbamate = new Werkstoff(
+            new short[]{0x0d,0xa9,0xb8},
+            "Ethyl Carbamate",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29907,
+            SET_FINE
+    );
+    public static final Werkstoff ethylNnitrocarbamate = new Werkstoff(
+            new short[]{0x0d,0x85,0xb8},
+            "Ethyl N-nitrocarbamate",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29908,
+            SET_FINE
+    );
+    public static final Werkstoff ammoniumNnitrourethane = new Werkstoff(
+            new short[]{0x0d,0x54,0xb8},
+            "Ammonium N-nitrourethane",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29909,
+            SET_FINE
+    );
+    public static final Werkstoff ethylDinitrocarbamate = new Werkstoff(
+            new short[]{0x39,0x08,0xc2},
+            "Ethyl Dinitrocarbamate",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29910,
+            SET_FINE
+    );
+    public static final Werkstoff dinitrogenPentoxide = new Werkstoff(
+            new short[]{0xcf,0xeb,0x34},
+            "Dinitrogen Pentoxide",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().onlyDust(),
+            29911,
+            SET_FINE
+    );
+    public static final Werkstoff ammoniumDinitramide = new Werkstoff(
+            new short[]{0x8a,0x0f,0xd1},
+            "Ammonium Dinitramide",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29912,
+            SET_FINE
+    );
+    public static final Werkstoff LMP103S = new Werkstoff(
+            new short[]{0xbf,0x2f,0xc2},
+            "LMP-103S",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29913,
+            SET_FINE
+    );
+    public static final Werkstoff ammoniumBicarbonate = new Werkstoff(
+            new short[]{0x59,0x5f,0x69},
+            "Ammonium bicarbonate",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().onlyDust(),
+            29914,
+            SET_FINE
     );
 
     @Override
