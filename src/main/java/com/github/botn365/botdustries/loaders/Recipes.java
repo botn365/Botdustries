@@ -23,6 +23,7 @@ public class Recipes
     {
         ItemStack C1 = GT_Utility.getIntegratedCircuit(1);
         ItemStack C2 = GT_Utility.getIntegratedCircuit(2);
+        ItemStack C24 = GT_Utility.getIntegratedCircuit(24);
 
         GT_Values.RA.addChemicalRecipe(Materials.Calcite.getDust(1), Materials.Empty.getCells(1),
                 Materials.HydrochloricAcid.getFluid(2000), Materials.Water.getFluid(1000),
@@ -67,6 +68,7 @@ public class Recipes
                 GT_OreDictUnificator.get(ingotHot, Materials.TungstenSteel,4L),null,10000, 1920, 3000);
 
         //rocket fuels
+        //LMP103S
         GT_Values.RA.addChemicalRecipe(Materials.CarbonMonoxide.getCells(1),C2,Materials.Chlorine.getGas(2000),
                 null, Phosgene.get(cell,1),60,480);
         GT_Values.RA.addChemicalRecipe(Phosgene.get(cell,1),C2,Materials.Ethanol.getFluid(1000),
@@ -138,7 +140,7 @@ public class Recipes
 
         GT_Values.RA.addMultiblockChemicalRecipe(
                 new ItemStack[]{
-                        GT_Utility.getIntegratedCircuit(24),
+                        C24,
                         AmmoniumNitrate.get(dust,2),
                         Materials.SodiumHydroxide.getDust(2)
                 },
@@ -154,6 +156,61 @@ public class Recipes
                 300,480
         );
 
+        //Monomethylhydrazine
+        cells.stackSize = 1;
+        GT_Values.RA.addCrackingRecipe(1,Materials.Toluene.getFluid(1000),Materials.Methanol.getFluid(1000),
+                OExylene.getFluidOrGas(1000),600,7680);
+
+        GT_Values.RA.addChemicalRecipe(OExylene.get(cell,1),VanadiumPentoxide.get(dustTiny),Materials.Oxygen.getGas(3000),
+                Materials.Water.getFluid(3000),PhthalicAnhydride.get(dust,1),800,1920);
+
+        GT_Values.RA.addBlastRecipe(Materials.Vanadium.getDust(2),C2,null,
+                null,VanadiumPentoxide.get(dust,5),null,200,120,700);
+
+        GT_Values.RA.addChemicalRecipe(Materials.Benzene.getCells(1),C2,Materials.Butene.getGas(1000),
+                TertButylbenzene.getFluidOrGas(1000),cells,100,1920);
+
+        GT_Values.RA.addChemicalRecipe(PhthalicAnhydride.get(dust,1),C2,TertButylbenzene.getFluidOrGas(1000),
+                TwoTertButylAnthraquinone.getFluidOrGas(1000),null,200,7680);
+
+        GT_Values.RA.addChemicalRecipe(Materials.Hydrogen.getCells(10),Materials.Palladium.getDustTiny(1),
+                                                                TwoTertButylAnthraquinone.getFluidOrGas(10000),
+                TwoTertButylAnthrahydroquinone.getFluidOrGas(10000),null,1200,7680);
+
+        GT_Values.RA.addChemicalRecipe(Materials.Oxygen.getCells(1),C2,TwoTertButylAnthrahydroquinone.getFluidOrGas(1000),
+                TwoTertButylAnthraquinone.getFluidOrGas(900),HydrogenPeroxide.get(cell,1),40,1920);
+
+        GT_Values.RA.addMultiblockChemicalRecipe(
+                new ItemStack[]{
+                        C24,
+                        Materials.Palladium.getDustTiny(1)
+                },
+                new FluidStack[]{
+                        Materials.Hydrogen.getGas(10000),
+                        Materials.Oxygen.getGas(10000),
+                        TwoTertButylAnthraquinone.getFluidOrGas(10000)
+                },
+                new FluidStack[]{
+                        HydrogenPeroxide.getFluidOrGas(10000),
+                        TwoTertButylAnthraquinone.getFluidOrGas(9000)
+                },
+                null,
+                1400,7680
+        );
+
+        GT_Values.RA.addChemicalRecipe(HydrogenPeroxide.get(cell,1),C2,Materials.Ammonia.getGas(2000),
+                Materials.Water.getFluid(2000),Hydrazine.get(cell,1),100,120);
+
+
+
+
+
+
+    }
+
+    public static void addFuels()
+    {
+        GT_Recipe.GT_Recipe_Map.sTurbineFuels.addFuel(TertButylbenzene.get(cell,1),null,420);
     }
 
     public static void removeRecipes()
