@@ -2,10 +2,7 @@ package com.github.botn365.botdustries.loaders;
 
 import com.github.bartimaeusnek.bartworks.system.material.Werkstoff;
 import com.github.bartimaeusnek.bartworks.util.Pair;
-import gregtech.api.enums.*;
-import gregtech.api.items.GT_MetaGenerated_Item;
-import gregtech.api.enums.Materials;
-import java.util.Arrays;
+import gregtech.api.enums.TextureSet;
 
 import static gregtech.api.enums.Materials.*;
 import static gregtech.api.enums.TextureSet.*;
@@ -174,6 +171,134 @@ public class MaterialsClass implements Runnable
             29914,
             SET_FINE
     );
+    public static final Werkstoff OExylene = new Werkstoff(
+            new short[]{0x88,0x94,0xa8},
+            "O-Exylene",
+            new Werkstoff.Stats().setGas(true),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29915,
+            SET_FINE
+    );
+    public static final Werkstoff PhthalicAnhydride = new Werkstoff(
+            new short[]{0x7c,0x99,0x42},
+            "Phthalic Anhydride",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().onlyDust(),
+            29916,
+            SET_METALLIC
+    );
+    public static final Werkstoff  VanadiumPentoxide = new Werkstoff(
+            new short[]{0x69,0x69,0x69},
+            " Vanadium Pentoxide",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().onlyDust(),
+            29917,
+            SET_METALLIC
+    );
+    public static final Werkstoff  TertButylbenzene = new Werkstoff(
+            new short[]{0,0,0},
+            "Tert-Butylbenzene",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29918,
+            SET_METALLIC
+    );
+    public static final Werkstoff  TwoTertButylAnthraquinone = new Werkstoff(
+            new short[]{0xcc,0x86,0x5a},
+            "2-tert-butyl-anthraquinone",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29919,
+            SET_METALLIC
+    );
+    public static final Werkstoff  TwoTertButylAnthrahydroquinone = new Werkstoff(
+            new short[]{0xad,0x53,0x1a},
+            "2-tert-butyl-anthrahydroquinone",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29920,
+            SET_METALLIC
+    );
+    public static final Werkstoff  HydrogenPeroxide = new Werkstoff(
+            new short[]{0xad,0x53,0x1a},
+            "Hydrogen Peroxide",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29921,
+            SET_METALLIC
+    );
+    public static final Werkstoff  Hydrazine = new Werkstoff(
+            new short[]{0xb5,0x07,0x07},
+            "hydrazine",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29922,
+            SET_METALLIC
+    );
+    public static final Werkstoff  DimethylSulfate = new Werkstoff(
+            new short[]{0xff,0xfb,0x00},
+            "Dimethyl Sulfate",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29923,
+            SET_METALLIC
+    );
+    public static final Werkstoff  Monomethylhydrazine = new Werkstoff(
+            new short[]{0xff,0x61,0x00},
+            "Monomethylhydrazine",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29924,
+            SET_METALLIC
+    );
+    public static final Werkstoff  Formaldehyde = new Werkstoff(
+            new short[]{0x2e,0xd9,0x83},
+            "Formaldehyde",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29925,
+            SET_METALLIC
+    );
+    public static final Werkstoff  EthylAcetate = new Werkstoff(
+            new short[]{0x0c,0xfb,0x32b},
+            "Ethyl Acetate",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29926,
+            SET_METALLIC
+    );
+    public static final Werkstoff  Acetylhydrazine = new Werkstoff(
+            new short[]{0xd1,0x5c,0x5c},
+            "Acetylhydrazine",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29927,
+            SET_METALLIC
+    );
+    public static final Werkstoff  UnsymmetricalDimethylhydrazine = new Werkstoff(
+            new short[]{0x80,0x06,0x00},
+            "Unsymmetrical Dimethylhydrazine",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29928,
+            SET_METALLIC
+    );
+
+
 
     @Override
     public void run()

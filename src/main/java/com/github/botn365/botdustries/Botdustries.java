@@ -11,6 +11,8 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 
+import static com.github.botn365.botdustries.loaders.Recipes.addFuels;
+
 //Uncomment as part of shadow example
 //import reactor.core.publisher.Flux;
 
@@ -40,6 +42,7 @@ public class Botdustries {
     public void postInit(FMLPostInitializationEvent event)
     {
         Recipes.addGTRecipe();
+        addFuels();
     }
 
     @Mod.EventHandler
