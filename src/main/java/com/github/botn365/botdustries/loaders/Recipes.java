@@ -6,9 +6,7 @@ import gregtech.api.enums.Materials;
 import gregtech.api.util.GT_OreDictUnificator;
 import gregtech.api.util.GT_Recipe;
 import gregtech.api.util.GT_Utility;
-import ic2.api.item.IC2Items;
 import ic2.core.Ic2Items;
-import javafx.scene.paint.Material;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
