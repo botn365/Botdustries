@@ -162,15 +162,6 @@ public class MaterialsClass implements Runnable
             29913,
             SET_FINE
     );
-    public static final Werkstoff HeatedAmmoniaChloride = new Werkstoff(
-            new short[]{0x59,0x5f,0x69},
-            "Heated Ammonia Chloride",
-            new Werkstoff.Stats(),
-            COMPOUND,
-            new Werkstoff.GenerationFeatures().disable().addCells(),
-            29914,
-            SET_FINE
-    );
     public static final Werkstoff OExylene = new Werkstoff(
             new short[]{0x88,0x94,0xa8},
             "O-Exylene",
@@ -297,6 +288,106 @@ public class MaterialsClass implements Runnable
             29928,
             SET_METALLIC
     );
+    public static final Werkstoff  MonomethylhydrazineFuelMix = new Werkstoff(
+            new short[]{0x78,0xe3,0xa7},
+            "Monomethylhydrazine Fuel Mix",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29929,
+            SET_METALLIC
+    );
+    public static final Werkstoff  UnsymmetricalDimethylhydrazineFuelMix = new Werkstoff(
+            new short[]{0xc8,0xff,0x00},
+            "Unsymmetrical Dimethylhydrazine Fuel Mix",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29930,
+            SET_METALLIC
+    );
+    public static final Werkstoff Nitromethane  = new Werkstoff(
+            new short[]{0x87,0x7d,0x60},
+            "Nitromethane",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29914,
+            SET_METALLIC
+    );
+    public static final Werkstoff  BoronTrioxide = new Werkstoff(
+            new short[]{0xe3,0xa6,0xd3},
+            "Boron Trioxide",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().onlyDust(),
+            29931,
+            SET_METALLIC
+    );
+    public static final Werkstoff  BoronTrifluoride = new Werkstoff(
+            new short[]{0xd0,0xe0,0x3f},
+            "Boron Trifluoride",
+            new Werkstoff.Stats().setGas(true),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29932,
+            SET_METALLIC
+    );
+    public static final Werkstoff  NitroniumTetrafluoroborate = new Werkstoff(
+            new short[]{0x57,0x69,0x2d},
+            "Nitronium Tetrafluoroborate",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().onlyDust(),
+            29933,
+            SET_METALLIC
+    );
+    public static final Werkstoff  Trinitramid  = new Werkstoff(
+            new short[]{0x28,0x2b,0x70},
+            "Trinitramid",
+            new Werkstoff.Stats().setGas(true),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29934,
+            SET_METALLIC
+    );
+    public static final Werkstoff  AmmoniaBoronfluorideSolution  = new Werkstoff(
+            new short[]{0x28,0x2b,0x70},
+            "Ammonia Boronfluoride Solution",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29935,
+            SET_METALLIC
+    );
+    public static final Werkstoff  SodiumTetrafluoroborate  = new Werkstoff(
+            new short[]{0xbe,0x6e,0xe0},
+            "Sodium Tetrafluoroborate",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29936,
+            SET_METALLIC
+    );
+    public static final Werkstoff  SodiumFluoride  = new Werkstoff(
+            new short[]{0x9f,0x70,0xe6},
+            "Sodium Fluoride",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().onlyDust(),
+            29937,
+            SET_METALLIC
+    );
+    public static final Werkstoff  Tetrafluoroborate  = new Werkstoff(
+            new short[]{0x6a,0x53,0x8c},
+            "Tetrafluoroborate",
+            new Werkstoff.Stats().setGas(true),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29938,
+            SET_METALLIC
+    );
+
 
 
 
