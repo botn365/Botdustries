@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Collection;
@@ -70,21 +71,21 @@ public class Recipes
         //rocket fuels
         //LMP103S
         GT_Values.RA.addChemicalRecipe(Materials.CarbonMonoxide.getCells(1), C2, Materials.Chlorine.getGas(2000),
-                null, Phosgene.get(cell, 1), 60, 480);
+                null, Phosgene.get(cell, 1), 50, 480);
         GT_Values.RA.addChemicalRecipe(Phosgene.get(cell, 1), C2, Materials.Ethanol.getFluid(1000),
-                Materials.HydrochloricAcid.getGas(1000), Ethylchloroformate.get(cell, 1), 200, 1920);
+                Materials.HydrochloricAcid.getGas(1000), Ethylchloroformate.get(cell, 1), 20, 1920);
 
         GT_Values.RA.addChemicalRecipe(Ethylchloroformate.get(cell, 1), C2, Materials.Ammonia.getGas(2000),
-                WerkstoffLoader.AmmoniumChloride.getFluidOrGas(1000), Ethylcarbamate.get(cell, 1), 200, 1920);
+                WerkstoffLoader.AmmoniumChloride.getFluidOrGas(1000), Ethylcarbamate.get(cell, 1), 200, 120);
 
         GT_Values.RA.addChemicalRecipe(Ethylcarbamate.get(cell, 1), C2, Materials.NitricAcid.getFluid(1000),
-                Materials.Water.getFluid(1000), EthylNnitrocarbamate.get(cell, 1), 200, 1920);
+                Materials.Water.getFluid(1000), EthylNnitrocarbamate.get(cell, 1), 40, 1024);
 
         GT_Values.RA.addChemicalRecipe(EthylNnitrocarbamate.get(cell, 1), C2, Materials.Ammonia.getGas(1000),
-                null, AmmoniumNnitrourethane.get(cell, 1), 200, 1920);
+                null, AmmoniumNnitrourethane.get(cell, 1), 40, 1920);
 
         GT_Values.RA.addChemicalRecipe(AmmoniumNnitrourethane.get(cell, 1), DinitrogenPentoxide.get(dust, 1), null, null,
-                EthylDinitrocarbamate.get(cell, 1), AmmoniumNitrate.get(dust, 1), 200, 1920);
+                EthylDinitrocarbamate.get(cell, 1), AmmoniumNitrate.get(dust, 1), 200, 480);
 
         GT_Values.RA.addChemicalRecipe(EthylDinitrocarbamate.get(cell, 1), C2, Materials.Ammonia.getGas(2000),
                 Ethylcarbamate.getFluidOrGas(980), AmmoniumDinitramide.get(cell, 1), 200, 1920);
@@ -98,7 +99,7 @@ public class Recipes
                         Materials.Water.getFluid(1500)},
                 new FluidStack[]{LMP103S.getFluidOrGas(10000)},
                 null,
-                2000, 1920);
+                1200, 1920);
 
         GT_Values.RA.addChemicalRecipe(Materials.PhosphorousPentoxide.getDust(1), C2, Materials.NitricAcid.getFluid(12000),
                 Materials.PhosphoricAcid.getFluid(4000), DinitrogenPentoxide.get(dust, 6), 200, 1920);
@@ -307,7 +308,6 @@ public class Recipes
     }
     public static void addFuels()
     {
-
         try {
             if (Loader.isModLoaded(GT_Values.MOD_ID_GC_CORE)) {
                 Class<?> rocket = Class.forName("micdoodle8.mods.galacticraft.api.recipe.RocketFuelRecipe");
@@ -316,16 +316,20 @@ public class Recipes
                 addFuel.invoke(null, MonomethylhydrazineFuelMix.getFluidOrGas(1).getFluid(), 6);
                 addFuel.invoke(null, UnsymmetricalDimethylhydrazineFuelMix.getFluidOrGas(1).getFluid(), 8);
             }
-        } catch (ClassNotFoundException e) {
+            if (Loader.isModLoaded("miscutils"))
+            {
+                Class gtppRecipeMap = Class.forName("gregtech.api.util.GTPP_Recipe$GTPP_Recipe_Map");
+                Field rocketFuels = gtppRecipeMap.getDeclaredField("sRocketFuels");
+                rocketFuels.setAccessible(true);
+                Class rocketFuelsClass = rocketFuels.getType();
+                Object rocketFuelsObject = rocketFuels.get(null);
+                Method dd = rocketFuelsClass.getDeclaredMethod("addFuel",FluidStack.class,FluidStack.class,int.class);
+                dd.invoke(rocketFuelsObject,LMP103S.getFluidOrGas(1000),null,666);
+                dd.invoke(rocketFuelsObject,MonomethylhydrazineFuelMix.getFluidOrGas(1000),null,1000);
+                dd.invoke(rocketFuelsObject,UnsymmetricalDimethylhydrazineFuelMix.getFluidOrGas(1000),null,1000);
+            }
+        } catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InvocationTargetException | NoSuchFieldException e) {
             e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-//        } catch (NoSuchFieldException e) {
-//            e.printStackTrace();
         }
         GT_Recipe.GT_Recipe_Map.sTurbineFuels.addFuel(TertButylbenzene.get(cell,1),null,420);
     }
