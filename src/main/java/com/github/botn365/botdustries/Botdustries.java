@@ -35,7 +35,6 @@ public class Botdustries {
         //String e = Flux.class.getSimpleName();
         //System.out.println("DIRT BLOCK, WoaG and Flux! >> " + Blocks.dirt.getUnlocalizedName() + " WOAG " + e);
         //Some example code
-        System.out.println("DIRT BLOCK >> " + Blocks.dirt.getUnlocalizedName());
     }
 
     @EventHandler
