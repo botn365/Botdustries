@@ -293,7 +293,7 @@ public class Recipes
                         Formaldehyde.getFluidOrGas(1000),
                         Materials.Hydrogen.getGas(2000)},
                 new FluidStack[]{
-                        UnsymmetricalDimethylhydrazine.getFluidOrGas(1000),
+                        UnsymmetricalDimethylhydrazine.getFluidOrGas(2000),
                         Materials.AceticAcid.getFluid(900)},
                 null,
                 100, 122_880
@@ -308,6 +308,7 @@ public class Recipes
     }
     public static void addFuels()
     {
+        Long startTime = System.nanoTime();
         try {
             if (Loader.isModLoaded(GT_Values.MOD_ID_GC_CORE)) {
                 Class<?> rocket = Class.forName("micdoodle8.mods.galacticraft.api.recipe.RocketFuelRecipe");
@@ -323,14 +324,16 @@ public class Recipes
                 rocketFuels.setAccessible(true);
                 Class rocketFuelsClass = rocketFuels.getType();
                 Object rocketFuelsObject = rocketFuels.get(null);
-                Method dd = rocketFuelsClass.getDeclaredMethod("addFuel",FluidStack.class,FluidStack.class,int.class);
-                dd.invoke(rocketFuelsObject,LMP103S.getFluidOrGas(1000),null,666);
-                dd.invoke(rocketFuelsObject,MonomethylhydrazineFuelMix.getFluidOrGas(1000),null,1000);
-                dd.invoke(rocketFuelsObject,UnsymmetricalDimethylhydrazineFuelMix.getFluidOrGas(1000),null,1000);
+                Method addFuel = rocketFuelsClass.getDeclaredMethod("addFuel",FluidStack.class,FluidStack.class,int.class);
+                addFuel.invoke(rocketFuelsObject,LMP103S.getFluidOrGas(1000),null,666);
+                addFuel.invoke(rocketFuelsObject,MonomethylhydrazineFuelMix.getFluidOrGas(1000),null,1000);
+                addFuel.invoke(rocketFuelsObject,UnsymmetricalDimethylhydrazineFuelMix.getFluidOrGas(1000),null,1000);
             }
         } catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InvocationTargetException | NoSuchFieldException e) {
             e.printStackTrace();
         }
+        long stopTime = System.nanoTime();
+        GT_Log.exp.println(stopTime-startTime);
         GT_Recipe.GT_Recipe_Map.sTurbineFuels.addFuel(TertButylbenzene.get(cell,1),null,420);
     }
 

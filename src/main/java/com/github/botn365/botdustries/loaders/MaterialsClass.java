@@ -2,7 +2,6 @@ package com.github.botn365.botdustries.loaders;
 
 import com.github.bartimaeusnek.bartworks.system.material.Werkstoff;
 import com.github.bartimaeusnek.bartworks.util.Pair;
-import gregtech.api.enums.TextureSet;
 
 import static gregtech.api.enums.Materials.*;
 import static gregtech.api.enums.TextureSet.*;
@@ -61,7 +60,7 @@ public class MaterialsClass implements Runnable
     );
     public static final Werkstoff AmmoniumNitrate = new Werkstoff(
             new short[]{0x81,0xcc,0x00},
-            "Ammonium Nitrate",
+            "Ammonium nitrate",
             new Werkstoff.Stats(),
             COMPOUND,
             new Werkstoff.GenerationFeatures().onlyDust(),
@@ -221,7 +220,7 @@ public class MaterialsClass implements Runnable
             "Hydrogen Peroxide",
             new Werkstoff.Stats(),
             COMPOUND,
-            new Werkstoff.GenerationFeatures().disable().addCells(),
+            new Werkstoff.GenerationFeatures().disable().addCells().enforceUnification(),
             29921,
             SET_METALLIC
     );
