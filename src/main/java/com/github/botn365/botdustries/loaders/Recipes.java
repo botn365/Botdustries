@@ -308,7 +308,6 @@ public class Recipes
     }
     public static void addFuels()
     {
-        Long startTime = System.nanoTime();
         try {
             if (Loader.isModLoaded(GT_Values.MOD_ID_GC_CORE)) {
                 Class<?> rocket = Class.forName("micdoodle8.mods.galacticraft.api.recipe.RocketFuelRecipe");
@@ -332,8 +331,6 @@ public class Recipes
         } catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InvocationTargetException | NoSuchFieldException e) {
             e.printStackTrace();
         }
-        long stopTime = System.nanoTime();
-        GT_Log.exp.println(stopTime-startTime);
         GT_Recipe.GT_Recipe_Map.sTurbineFuels.addFuel(TertButylbenzene.get(cell,1),null,420);
     }
 
