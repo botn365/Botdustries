@@ -56,17 +56,20 @@ public class Recipes
         GT_Values.RA.addBlastRecipe(H2WO4, null, null, null, WO3, null,
                 200, 480, 1200);
 
-        ItemStack WO3Fe = TungstenSteelOxide.get(dust, 2);
-        GT_Values.RA.addMixerRecipe(WO3, Materials.Steel.getDust(1), null, null, null, null,
-                WO3Fe, 100, 1920);
+//        ItemStack WO3Fe = TungstenSteelOxide.get(dust, 2);
+//        GT_Values.RA.addMixerRecipe(WO3, Materials.Steel.getDust(1), null, null, null, null,
+//                WO3Fe, 100, 1920);
+
+        GT_Values.RA.addBlastRecipe(WO3,C2,Materials.Hydrogen.getGas(3000),
+                null,Materials.Tungsten.getDust(1),null,100,1920,1000);
 
         WO3.stackSize = 2;
         GT_Values.RA.addBlastRecipe(WO3, Materials.Carbon.getDust(3), null, Materials.CarbonDioxide.getGas(6000),
                 GT_OreDictUnificator.get(ingotHot, Materials.Tungsten, 2L), null, 8000, 1920, 3000);
 
-        WO3Fe.stackSize = 4;
-        GT_Values.RA.addBlastRecipe(WO3Fe, Materials.Carbon.getDust(3), Materials.Nitrogen.getGas(4000), Materials.CarbonDioxide.getGas(6000),
-                GT_OreDictUnificator.get(ingotHot, Materials.TungstenSteel, 4L), null, 10000, 1920, 3000);
+//        WO3Fe.stackSize = 4;
+//        GT_Values.RA.addBlastRecipe(WO3Fe, Materials.Carbon.getDust(3), Materials.Nitrogen.getGas(4000), Materials.CarbonDioxide.getGas(6000),
+//                GT_OreDictUnificator.get(ingotHot, Materials.TungstenSteel, 4L), null, 10000, 1920, 3000);
 
         //rocket fuels
         //LMP103S
