@@ -240,7 +240,7 @@ public class Recipes
                      Materials.Water.getFluid(1000),
                      Materials.NitricOxide.getGas(1000)},
                 new ItemStack[]{NitroniumTetrafluoroborate.get(dust,1)},
-                100,30_720
+                100,7_680
         );
 
         GT_Values.RA.addMultiblockChemicalRecipe(
@@ -251,7 +251,7 @@ public class Recipes
                         AmmoniaBoronfluorideSolution.getFluidOrGas(1000)
                 },
                 null,
-                200,30_720
+                20,30_720
         );
 
         cells.stackSize = 3;
@@ -287,7 +287,7 @@ public class Recipes
                         Acetylhydrazine.getFluidOrGas(1000),
                         Materials.Ethanol.getFluid(900)},
                 null,
-                300,30_720
+                40,30_720
         );
 
         GT_Values.RA.addMultiblockChemicalRecipe(
@@ -300,14 +300,14 @@ public class Recipes
                         UnsymmetricalDimethylhydrazine.getFluidOrGas(2000),
                         Materials.AceticAcid.getFluid(900)},
                 null,
-                100, 122_880
+                20, 122_880
         );
 
-        GT_Values.RA.addMixerRecipe(UnsymmetricalDimethylhydrazine.get(cell,1),C2,null,null,
-                Trinitramid.getFluidOrGas(1000),UnsymmetricalDimethylhydrazineFuelMix.getFluidOrGas(2000),cells,10,120);
+        GT_Values.RA.addMixerRecipe(UnsymmetricalDimethylhydrazine.get(cell,2),C2,null,null,
+                Trinitramid.getFluidOrGas(1000),UnsymmetricalDimethylhydrazineFuelMix.getFluidOrGas(3000),cells,10,120);
 
         GT_Values.RA.addMixerRecipe(Trinitramid.get(cell,1),C2,null,null,
-                UnsymmetricalDimethylhydrazine.getFluidOrGas(1000),UnsymmetricalDimethylhydrazineFuelMix.getFluidOrGas(2000),cells,10,120);
+                UnsymmetricalDimethylhydrazine.getFluidOrGas(2000),UnsymmetricalDimethylhydrazineFuelMix.getFluidOrGas(3000),cells,10,120);
 
     }
     public static void addFuels()
@@ -329,8 +329,8 @@ public class Recipes
                 Object rocketFuelsObject = rocketFuels.get(null);
                 Method addFuel = rocketFuelsClass.getDeclaredMethod("addFuel",FluidStack.class,FluidStack.class,int.class);
                 addFuel.invoke(rocketFuelsObject,LMP103S.getFluidOrGas(1000),null,666);
-                addFuel.invoke(rocketFuelsObject,MonomethylhydrazineFuelMix.getFluidOrGas(1000),null,1000);
-                addFuel.invoke(rocketFuelsObject,UnsymmetricalDimethylhydrazineFuelMix.getFluidOrGas(1000),null,1000);
+                addFuel.invoke(rocketFuelsObject,MonomethylhydrazineFuelMix.getFluidOrGas(1000),null,1500);
+                addFuel.invoke(rocketFuelsObject,UnsymmetricalDimethylhydrazineFuelMix.getFluidOrGas(1000),null,3000);
             }
         } catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InvocationTargetException | NoSuchFieldException e) {
             e.printStackTrace();
