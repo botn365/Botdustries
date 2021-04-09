@@ -150,7 +150,7 @@ public class Recipes
         //Monomethylhydrazine
         cells.stackSize = 1;
         GT_Values.RA.addCrackingRecipe(1, Materials.Toluene.getFluid(1000), Materials.Methanol.getFluid(1000),
-                OExylene.getFluidOrGas(1000), 600, 7680);
+                OExylene.getFluidOrGas(1000), 600, 4096);
 
         GT_Values.RA.addChemicalRecipe(OExylene.get(cell, 1), VanadiumPentoxide.get(dustTiny), Materials.Oxygen.getGas(3000),
                 Materials.Water.getFluid(3000), PhthalicAnhydride.get(dust, 1), 800, 1920);
@@ -201,7 +201,7 @@ public class Recipes
         );
 
         GT_Values.RA.addChemicalRecipe(HydrogenPeroxide.get(cell, 1), C2, Materials.Ammonia.getGas(2000),
-                Materials.Water.getFluid(2000), Hydrazine.get(cell, 1), 100, 120);
+                Materials.Water.getFluid(2000), Hydrazine.get(cell, 2), 100, 120);
 
         GT_Values.RA.addChemicalRecipe(Materials.SulfuricAcid.getCells(1), C2, Materials.Methanol.getFluid(2000),
                 null, DimethylSulfate.get(cell, 1), 50, 480);
@@ -213,11 +213,12 @@ public class Recipes
                 Materials.SulfurTrioxide.getGas(1000), Monomethylhydrazine.get(cell, 2), 400, 7680);
 
         GT_Values.RA.addChemicalRecipeForBasicMachineOnly(DimethylSulfate.get(cell, 1), C1, Hydrazine.getFluidOrGas(2000),
-                Monomethylhydrazine.getFluidOrGas(2000), Materials.SulfurTrioxide.getCells(1), null, 400, 7680);
+                Monomethylhydrazine.getFluidOrGas(2000), Materials.SulfurTrioxide.getCells(1), null, 40, 16000);
 
         GT_Values.RA.addMixerRecipe(AmmoniumDinitramide.get(cell, 1), C1, null, null, Monomethylhydrazine.getFluidOrGas(2000),
                 MonomethylhydrazineFuelMix.getFluidOrGas(3000), cells, 20, 480);
         cells.stackSize = 2;
+
         GT_Values.RA.addMixerRecipe(Monomethylhydrazine.get(cell, 2), C2, null, null, AmmoniumDinitramide.getFluidOrGas(1000),
                 MonomethylhydrazineFuelMix.getFluidOrGas(3000), cells, 20, 480);
         cells.stackSize = 1;
