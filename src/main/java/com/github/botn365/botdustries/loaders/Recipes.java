@@ -210,10 +210,10 @@ public class Recipes
                 DimethylSulfate.getFluidOrGas(1000), cells, null, 50, 480);
 
         GT_Values.RA.addChemicalRecipe(Hydrazine.get(cell, 2), C2, DimethylSulfate.getFluidOrGas(1000),
-                Materials.SulfurTrioxide.getGas(1000), Monomethylhydrazine.get(cell, 2), 400, 7680);
+                Materials.SulfurTrioxide.getGas(1000), Monomethylhydrazine.get(cell, 2), 80, 16000);
 
         GT_Values.RA.addChemicalRecipeForBasicMachineOnly(DimethylSulfate.get(cell, 1), C1, Hydrazine.getFluidOrGas(2000),
-                Monomethylhydrazine.getFluidOrGas(2000), Materials.SulfurTrioxide.getCells(1), null, 40, 16000);
+                Monomethylhydrazine.getFluidOrGas(2000), Materials.SulfurTrioxide.getCells(1), null, 80, 16000);
 
         GT_Values.RA.addMixerRecipe(AmmoniumDinitramide.get(cell, 1), C1, null, null, Monomethylhydrazine.getFluidOrGas(2000),
                 MonomethylhydrazineFuelMix.getFluidOrGas(3000), cells, 20, 480);
