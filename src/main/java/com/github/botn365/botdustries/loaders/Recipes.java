@@ -94,7 +94,7 @@ public class Recipes
                 Ethylcarbamate.getFluidOrGas(980), AmmoniumDinitramide.get(cell, 1), 200, 1920);
 
         GT_Values.RA.addMultiblockChemicalRecipe(
-                new ItemStack[]{C2},
+                new ItemStack[]{C24},
                 new FluidStack[]{
                         AmmoniumDinitramide.getFluidOrGas(6000),
                         Materials.Methanol.getFluid(2000),
