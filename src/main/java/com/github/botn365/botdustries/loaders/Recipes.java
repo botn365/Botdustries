@@ -50,7 +50,7 @@ public class Recipes
         Ca2Cl.stackSize = 6;
         ItemStack H2WO4 = TungsticAcid.get(dust, 1);
         GT_Values.RA.addChemicalRecipe(scheelite, null, Materials.HydrochloricAcid.getFluid(4000), null,
-                H2WO4, Ca2Cl, 200, 480);
+                H2WO4, Ca2Cl, 50, 1920);
 
         ItemStack WO3 = TungstenTrioxide.get(dust, 1);
         GT_Values.RA.addBlastRecipe(H2WO4, null, null, null, WO3, null,
