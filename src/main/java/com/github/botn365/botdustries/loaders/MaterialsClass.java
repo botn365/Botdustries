@@ -161,9 +161,9 @@ public class MaterialsClass implements Runnable
             29913,
             SET_FINE
     );
-    public static final Werkstoff OExylene = new Werkstoff(
+    public static final Werkstoff OXylene = new Werkstoff(
             new short[]{0x88,0x94,0xa8},
-            "O-Exylene",
+            "O-Xylene",
             new Werkstoff.Stats().setGas(true),
             COMPOUND,
             new Werkstoff.GenerationFeatures().disable().addCells(),

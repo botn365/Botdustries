@@ -150,9 +150,9 @@ public class Recipes
         //Monomethylhydrazine
         cells.stackSize = 1;
         GT_Values.RA.addCrackingRecipe(1, Materials.Toluene.getFluid(1000), Materials.Methanol.getFluid(1000),
-                OExylene.getFluidOrGas(1000), 600, 4096);
+                OXylene.getFluidOrGas(1000), 600, 4096);
 
-        GT_Values.RA.addChemicalRecipe(OExylene.get(cell, 1), VanadiumPentoxide.get(dustTiny), Materials.Oxygen.getGas(3000),
+        GT_Values.RA.addChemicalRecipe(OXylene.get(cell, 1), VanadiumPentoxide.get(dustTiny), Materials.Oxygen.getGas(3000),
                 Materials.Water.getFluid(3000), PhthalicAnhydride.get(dust, 1), 800, 1920);
 
         GT_Values.RA.addBlastRecipe(Materials.Vanadium.getDust(2), C2, null,
