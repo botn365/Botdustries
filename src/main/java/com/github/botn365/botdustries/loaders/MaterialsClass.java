@@ -35,6 +35,21 @@ public class MaterialsClass implements Runnable
             new Pair<>(Tungsten,1),
             new Pair<>(Oxygen,4)
     );
+
+
+    public static final Werkstoff TungsticAciddub = new Werkstoff(
+            new short[]{0xf5, 0xf1, 0x16},
+            "Tungstic Acid",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().onlyDust().enforceUnification(),
+            29900,
+            SET_SHINY,
+            new Pair<>(Hydrogen,2),
+            new Pair<>(Tungsten,1),
+            new Pair<>(Oxygen,4)
+    );
+
     public static final Werkstoff TungstenTrioxide = new Werkstoff(
             new short[]{0x0f,0x5,0x16},
             "Tungsten Trioxide",

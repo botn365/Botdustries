@@ -1,0 +1,26 @@
+// Add your dependencies here
+
+dependencies {
+    compileOnly("org.projectlombok:lombok:1.18.22") {
+        transitive = false
+    }
+
+    compile("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev")
+
+    compile("gtmega:gt5u-mc1.7.10:5.28.25-gtmega:dev") {
+        transitive = false
+    }
+
+    compile("eu.usrv:YAMCore:1.7.10-0.5.79:deobf")
+
+    compile("com.github.GTNewHorizons:CodeChickenCore:master-SNAPSHOT:dev") {
+        transitive = true
+    }
+    compile("com.github.GTNewHorizons:CodeChickenCore:master-SNAPSHOT:dev") {
+        transitive = true
+    }
+
+    compile("gtmega:structure-lib-mc1.7.10:1.0.9-gtnh")
+
+    annotationProcessor("org.projectlombok:lombok:1.18.22")
+}
