@@ -7,6 +7,7 @@ public class ClientProxy extends CommonProxy {
     // preInit "Run before anything else. Read your config, create blocks, items,
     // etc, and register them with the GameRegistry."
     public void preInit(FMLPreInitializationEvent event) 	{
+        super.preInit(event);
     }
 
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes."

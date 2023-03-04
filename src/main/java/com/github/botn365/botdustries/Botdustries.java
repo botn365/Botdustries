@@ -29,6 +29,11 @@ public class Botdustries {
     public static CommonProxy proxy;
 
     @Mod.EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
+        proxy.preInit(event);
+    }
+
+    @Mod.EventHandler
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes."
     public void init(FMLInitializationEvent event) {
         proxy.init(event);
