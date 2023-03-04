@@ -1,6 +1,5 @@
 package com.github.botn365.botdustries.loaders;
 
-import com.github.bartimaeusnek.bartworks.system.material.WerkstoffLoader;
 import cpw.mods.fml.common.Loader;
 import gregtech.api.enums.GT_Values;
 import gregtech.api.enums.Materials;
@@ -17,7 +16,7 @@ import java.util.Collection;
 import java.util.HashSet;
 
 import static com.github.bartimaeusnek.bartworks.system.material.WerkstoffLoader.*;
-import static com.github.botn365.botdustries.loaders.MaterialsClass.*;
+import static com.github.botn365.botdustries.loaders.MaterialsBot.*;
 import static gregtech.api.enums.OrePrefixes.*;
 
 public class Recipes

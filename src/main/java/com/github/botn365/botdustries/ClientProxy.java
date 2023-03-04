@@ -1,6 +1,7 @@
 package com.github.botn365.botdustries;
 
 import cpw.mods.fml.common.event.*;
+import net.minecraftforge.fluids.Fluid;
 
 public class ClientProxy extends CommonProxy {
 

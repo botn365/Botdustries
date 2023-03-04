@@ -7,21 +7,9 @@ import static gregtech.api.enums.TextureSet.*;
 
 import static com.github.bartimaeusnek.bartworks.system.material.Werkstoff.Types.*;
 
-public class MaterialsClass implements Runnable
+public class MaterialsBot implements Runnable
 {
      //reserved material ids 29_899-29_999
-//    public static final Werkstoff calciumTungstate = new Werkstoff(
-//            new short[]{0xc, 0xed, 0xd7},
-//            "Calcium Tungstate",
-//            new Werkstoff.Stats(),
-//            COMPOUND,
-//            new Werkstoff.GenerationFeatures().onlyDust().enforceUnification(),
-//            29899,
-//            SET_FINE,
-//            new Pair<>(Sodium, 2),
-//            new Pair<>(Tungsten, 1),
-//            new Pair<>(Oxygen, 4)
-//    );
     public static final Werkstoff TungsticAcid = new Werkstoff(
             new short[]{0xf5, 0xf1, 0x16},
             "Tungstic Acid",
@@ -34,20 +22,6 @@ public class MaterialsClass implements Runnable
             new Pair<>(Tungsten,1),
             new Pair<>(Oxygen,4)
     );
-
-
-//    public static final Werkstoff TungsticAciddub = new Werkstoff(
-//            new short[]{0xf5, 0xf1, 0x16},
-//            "Tungstic Acid",
-//            new Werkstoff.Stats(),
-//            COMPOUND,
-//            new Werkstoff.GenerationFeatures().onlyDust().enforceUnification(),
-//            29900,
-//            SET_SHINY,
-//            new Pair<>(Hydrogen,2),
-//            new Pair<>(Tungsten,1),
-//            new Pair<>(Oxygen,4)
-//    );
 
     public static final Werkstoff TungstenTrioxide = new Werkstoff(
             new short[]{0x0f,0x5,0x16},
@@ -399,6 +373,46 @@ public class MaterialsClass implements Runnable
             new Werkstoff.GenerationFeatures().disable().addCells(),
             29938,
             SET_METALLIC
+    );
+
+    public static final Werkstoff  SodiumHydroxideSolution  = new Werkstoff(
+            new short[]{0x10,0x20,0xee},
+            "Sodium Hydroxide Solution",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29939,
+            SET_METALLIC
+    );
+
+    public static final Werkstoff  BauxiteSolution  = new Werkstoff(
+            new short[]{0xee,0x88,0x22},
+            "Bauxite Solution",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29940,
+            SET_METALLIC
+    );
+
+    public static final Werkstoff  Alumina  = new Werkstoff(
+            new short[]{0xee,0xe7,0xef},
+            "Alumina",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().onlyDust(),
+            29941,
+            SET_POWDER
+    );
+
+    public static final Werkstoff  RedMud  = new Werkstoff(
+            new short[]{224,35,10},
+            "Red Mud",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().onlyDust(),
+            29942,
+            SET_FLUID
     );
 
 

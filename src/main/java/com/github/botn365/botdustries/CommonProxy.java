@@ -1,9 +1,10 @@
 package com.github.botn365.botdustries;
 
 import com.github.bartimaeusnek.bartworks.API.WerkstoffAdderRegistry;
-import com.github.botn365.botdustries.loaders.MaterialsClass;
+import com.github.botn365.botdustries.loaders.Fluids;
+import com.github.botn365.botdustries.loaders.MaterialsBot;
 import com.github.botn365.botdustries.loaders.Recipes;
-import cpw.mods.fml.common.Mod;
+import com.github.botn365.botdustries.stuff.AluminiumChain;
 import cpw.mods.fml.common.event.*;
 
 import static com.github.botn365.botdustries.loaders.Recipes.addFuels;
@@ -13,7 +14,8 @@ public class CommonProxy {
     // preInit "Run before anything else. Read your config, create blocks, items,
     // etc, and register them with the GameRegistry."
     public void preInit(FMLPreInitializationEvent event) 	{
-        WerkstoffAdderRegistry.addWerkstoffAdder(new MaterialsClass());
+        WerkstoffAdderRegistry.addWerkstoffAdder(new MaterialsBot());
+        Fluids.register();
     }
 
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes."
@@ -25,6 +27,7 @@ public class CommonProxy {
     public void postInit(FMLPostInitializationEvent event) {
         Recipes.addGTRecipe();
         addFuels();
+        AluminiumChain.add();
     }
 
     public void serverAboutToStart(FMLServerAboutToStartEvent event) {

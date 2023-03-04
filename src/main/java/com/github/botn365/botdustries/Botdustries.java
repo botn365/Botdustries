@@ -1,16 +1,10 @@
 package com.github.botn365.botdustries;
 
-import com.github.bartimaeusnek.bartworks.API.WerkstoffAdderRegistry;
-import com.github.botn365.botdustries.loaders.MaterialsClass;
-import com.github.botn365.botdustries.loaders.Recipes;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.*;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import static com.github.botn365.botdustries.loaders.Recipes.addFuels;
 
 @Mod(modid = Tags.MODID,
         version = Tags.VERSION,
