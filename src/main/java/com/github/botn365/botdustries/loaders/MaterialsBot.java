@@ -415,6 +415,55 @@ public class MaterialsBot implements Runnable
             SET_FLUID
     );
 
+    public static final Werkstoff  Acrylonitrile  = new Werkstoff(
+            new short[]{50,200,100},
+            "Acrylonitrile",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29943,
+            SET_FLUID
+    );
+
+    public static final Werkstoff  Acrylamide  = new Werkstoff(
+            new short[]{50,200,150},
+            "Acrylamide",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().onlyDust(),
+            29944,
+            SET_FLUID
+    );
+
+    public static final Werkstoff  TMEDA  = new Werkstoff(
+            new short[]{150,200,10},
+            "TMEDA",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().addCells(),
+            29945,
+            SET_FLUID
+    );
+
+    public static final Werkstoff  polyAcrylamide  = new Werkstoff(
+            new short[]{150,200,10},
+            "polyAcrylamide",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().onlyDust(),
+            29946,
+            SET_FLUID
+    );
+
+    public static final Werkstoff  AmmoniaPersulfate  = new Werkstoff(
+            new short[]{220,250,50},
+            "Ammonia Persulfate",
+            new Werkstoff.Stats(),
+            COMPOUND,
+            new Werkstoff.GenerationFeatures().disable().onlyDust(),
+            29947,
+            SET_FLUID
+    );
 
     @Override
     public void run()

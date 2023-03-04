@@ -5,6 +5,7 @@ import com.github.botn365.botdustries.loaders.Fluids;
 import com.github.botn365.botdustries.loaders.MaterialsBot;
 import com.github.botn365.botdustries.loaders.Recipes;
 import com.github.botn365.botdustries.stuff.AluminiumChain;
+import com.github.botn365.botdustries.stuff.RocketFuels;
 import cpw.mods.fml.common.event.*;
 
 import static com.github.botn365.botdustries.loaders.Recipes.addFuels;
@@ -27,6 +28,7 @@ public class CommonProxy {
     public void postInit(FMLPostInitializationEvent event) {
         Recipes.addGTRecipe();
         addFuels();
+        RocketFuels.add();
         AluminiumChain.add();
     }
 

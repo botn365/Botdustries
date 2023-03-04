@@ -1,4 +1,4 @@
-package com.github.botn365.botdustries.stuff;
+package com.github.botn365.botdustries.loaders;
 
 import com.github.botn365.botdustries.loaders.Fluids;
 import gregtech.api.objects.GT_Fluid;

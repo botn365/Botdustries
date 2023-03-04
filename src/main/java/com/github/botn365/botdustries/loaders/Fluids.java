@@ -1,12 +1,7 @@
 package com.github.botn365.botdustries.loaders;
 
-import com.github.botn365.botdustries.stuff.GT_Fluid_Extended;
-import gregtech.api.objects.GT_Fluid;
 import gregtech.api.util.GT_LanguageManager;
-import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
-
-import java.awt.*;
 
 public class Fluids {
 
