@@ -7,9 +7,9 @@ dependencies {
 
     compile("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev")
 
-//    compile("gtmega:gt5u-mc1.7.10:5.29.2-mega:dev") {
-//        transitive = false
-//    }
+    compile("gtmega:gt5u-mc1.7.10:5.30.0-mega:dev") {
+        transitive = false
+    }
 
     compile("eu.usrv:YAMCore:1.7.10-0.5.79:deobf")
 

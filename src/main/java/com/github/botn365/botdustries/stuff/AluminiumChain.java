@@ -18,12 +18,13 @@ public class AluminiumChain {
     public static void add() {
         val circuit1 = GT_Utility.getIntegratedCircuit(1);
         FluidStack moltenCryolite = Fluids.MOLTEN_CRYOLITE.getFluid(144);
-        FluidStack nahosol = MaterialsBot.SodiumHydroxideSolution.getFluidOrGas(1000);
+        FluidStack nahosol = MaterialsBot.SodiumHydroxideSolution.getFluidOrGas(4000);
         ItemStack cryoliteDust = gregtech.api.enums.Materials.Cryolite.getDust(1);
         GT_Recipe.GT_Recipe_Map.sBlastRecipes.addRecipe(false,new ItemStack[]{cryoliteDust},null,null,null,null,new FluidStack[]{moltenCryolite},100,480,1100);
         GT_Values.RA.addFluidSolidifierRecipe(null,moltenCryolite,cryoliteDust,100,30);
-        GT_Values.RA.addFluidHeaterRecipe(Materials.SodiumHydroxide.getDust(1),Materials.Water.getFluid(1000),nahosol,20,120);
+        GT_Values.RA.addFluidHeaterRecipe(Materials.SodiumHydroxide.getDust(1),Materials.Water.getFluid(4000),nahosol,20,120);
         val bauxiteSolution = MaterialsBot.BauxiteSolution.getFluidOrGas(1000);
+        nahosol.amount = 1000;
         GT_Recipe.GT_Recipe_Map.sAutoclaveRecipes.addRecipe(false,new ItemStack[]{Materials.Bauxite.getDust(1)},null,null,new FluidStack[]{nahosol},new FluidStack[]{bauxiteSolution},200,30,0);
         bauxiteSolution.amount = 2500;
         val aluminaSolution = Fluids.ALUMINA_SOLUTION.getFluid(1000);
@@ -33,7 +34,7 @@ public class AluminiumChain {
         cryoliteDust.stackSize = 63;
         moltenCryolite.amount = 9216;
         alumina.stackSize = 12;
-        GT_Recipe.GT_Recipe_Map.sArcFurnaceRecipes.addRecipe(false,new ItemStack[]{alumina},new ItemStack[]{cryoliteDust},null,new FluidStack[]{moltenCryolite},new FluidStack[]{Materials.Aluminium.getMolten(1728)},480,480,0);
+        GT_Recipe.GT_Recipe_Map.sArcFurnaceRecipes.addRecipe(false,new ItemStack[]{alumina},new ItemStack[]{cryoliteDust},null,new FluidStack[]{moltenCryolite},new FluidStack[]{Materials.Aluminium.getMolten(1728)},480,360,0);
 
         GT_Values.RA.addChemicalRecipe(Materials.HydrofluoricAcid.getCells(2),null,Fluids.ALUMINA_SOLUTION.getFluid(1000 ),null,Materials.Cryolite.getDust(1),Materials.Empty.getCells(2),240,480 );
 
@@ -53,9 +54,9 @@ public class AluminiumChain {
                 null,
                 new ItemStack[]{MaterialsBot.polyAcrylamide.get(dust,9)},600,1920);
 
-        bauxiteSolution.amount = 3000;
-        aluminaSolution.amount = 2000;
-        GT_Recipe.GT_Recipe_Map.sChemicalBathRecipes.addRecipe(false,new ItemStack[]{MaterialsBot.polyAcrylamide.get(dustTiny)},new ItemStack[]{MaterialsBot.RedMud.get(dust,2)},null,new FluidStack[]{bauxiteSolution},new FluidStack[]{aluminaSolution},300,480,0);
+        bauxiteSolution.amount = 27000;
+        aluminaSolution.amount = 18000;
+        GT_Recipe.GT_Recipe_Map.sChemicalBathRecipes.addRecipe(false,new ItemStack[]{MaterialsBot.polyAcrylamide.get(dust)},new ItemStack[]{MaterialsBot.RedMud.get(dust,18)},null,new FluidStack[]{bauxiteSolution},new FluidStack[]{aluminaSolution},2700,480,0);
 
 
     }
