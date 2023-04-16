@@ -30,7 +30,7 @@ public class AluminiumChain {
         val aluminaSolution = Fluids.ALUMINA_SOLUTION.getFluid(1000);
         GT_Recipe.GT_Recipe_Map.sChemicalBathRecipes.addRecipe(false,new ItemStack[]{circuit1},new ItemStack[]{MaterialsBot.RedMud.get(dust)},null,new FluidStack[]{bauxiteSolution},new FluidStack[]{aluminaSolution},2400,16,0);
         val alumina = MaterialsBot.Alumina.get(dust);
-        GT_Recipe.GT_Recipe_Map.sDistilleryRecipes.addRecipe(false,null,new ItemStack[]{alumina},null,new FluidStack[]{aluminaSolution},new FluidStack[]{nahosol},200,30,0);
+        GT_Recipe.GT_Recipe_Map.sDistilleryRecipes.addRecipe(false,new ItemStack[]{circuit1},new ItemStack[]{alumina},null,new FluidStack[]{aluminaSolution},new FluidStack[]{nahosol},200,30,0);
         cryoliteDust.stackSize = 63;
         moltenCryolite.amount = 9216;
         alumina.stackSize = 12;
